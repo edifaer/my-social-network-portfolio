@@ -1,0 +1,17 @@
+.loginForm {
+    margin-left: 200px;
+}
+
+.loginInput {
+    margin-bottom: 10px;
+}
+
+.loginForm h1 {
+    margin-top: 0px;
+}
+
+.formSummaryError {
+    border: red 1px solid;
+    padding: 5px;
+    color: rosybrown;
+}

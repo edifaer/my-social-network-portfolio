@@ -1,0 +1,75 @@
+.nav {
+  grid-area: n;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.item a {
+  color: #9196af;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.item a.activeLink {
+  color: #515365;
+}
+
+.personalData {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+}
+
+.personalData img {
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  border: 5px solid white;
+  border-radius: 50%;
+  bottom: 50px;
+  left: 15px;
+}
+
+.personalData p {
+  /*margin-top: 15px;*/
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: #9196af;
+}
+
+.personalData a {
+  position: relative;
+  top: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #515365;
+  font-weight: 700;
+  line-height: 35px;
+}
+
+input[type="file"] {
+  display: none;
+}
+.customFileUpload {
+  z-index: 1;
+  height: 35px;
+  line-height: 35px;
+  background-color:#D1E2F2;
+  width: 35px;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  bottom: 55px;
+  left: 115px;
+  cursor: pointer;
+}
+
+.customFileUpload:hover {
+  box-shadow: inset 0px 0px 85px rgba(0,0,0,0.4);
+}

@@ -1,0 +1,26 @@
+.app-wrapper {
+    margin: auto;
+    display: grid;
+    width: 1200px;
+    grid-template-areas: "h h h" "n n n" "c c c";
+    grid-template-rows: 380px 100px 1fr;
+}
+
+.app-wrapper-content {
+    grid-area: c;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.profile-wrapper {
+    display: grid;
+    grid-template-areas: 's p a';
+    grid-template-columns: 2fr 8fr 2fr;
+    column-gap: 20px;
+
+}
+
+body {
+    background-color: #d1e2f2;
+    font-family: Roboto,sans-serif;
+}

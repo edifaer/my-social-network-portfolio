@@ -1,0 +1,71 @@
+.card {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.cardHeader img{
+    border-bottom: 1px solid #e6ecf5;
+}
+
+.cardContent {
+    text-align: center;
+}
+
+.cardContent_avatar {
+    position: relative;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+
+.authorThumb {
+    width: 98px;
+    height: 98px;
+    margin: 0 auto 10px;
+}
+
+.authorThumb img{
+    border: 4px solid #fff;
+    border-radius: 50%;
+
+}
+
+.authorContent a {
+    text-decoration: none;
+    color: #515365;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.authorContent a:hover {
+    color:#FF5E3A;
+}
+
+.country {
+    font-size: 14px;
+    color: #9196af;
+    line-height: 20px;
+}
+
+.cardContent_count a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 35px;
+}
+
+.cardContent_count a:last-child {
+    margin-right: 0px;
+}
+
+.h6 {
+    font-size: .875rem;
+    color: #515365;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.title {
+    text-decoration: none;
+    color: #888da8;
+    font-size: .812rem;
+}

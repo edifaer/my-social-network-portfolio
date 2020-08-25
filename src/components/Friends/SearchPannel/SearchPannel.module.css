@@ -1,0 +1,34 @@
+.pannel {
+    background-color: #ffffff;
+    padding: 0px 20px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.inputField {
+    padding: 10px;
+    height: 20px;
+    border: 1px solid #D7D9E5;
+    width: 200px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.inputField:focus {
+    outline: none;
+}
+
+.searchIcon {
+    float: right;
+    height: 20px;
+    border: 1px solid #D7D9E5;
+    width: 20px;
+    padding: 10px;
+    background: #D7D9E5;
+    color: white;
+    font-size: 20px;
+}
