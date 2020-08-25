@@ -19,7 +19,7 @@
     left: 28px;
     border-radius: 50%;
     border: 16px solid #000;
-    border-color: #ff5e3a transparent #ff5e3a transparent;
+    border-color: #3F4257 transparent #3F4257 transparent;
     animation: ldio-qas1aupsnd9 1.36986301369863s linear infinite;
 }
 
@@ -54,15 +54,15 @@
     height: 16px;
     top: -16px;
     left: 48px;
-    background: #ff5e3a;
+    background: #3F4257;
     border-radius: 50%;
-    box-shadow: 0 128px 0 0 #ff5e3a;
+    box-shadow: 0 128px 0 0 #3F4257;
 }
 
 .ldio-qas1aupsnd9 > div:nth-child(3) div:after {
     left: -16px;
     top: 48px;
-    box-shadow: 128px 0 0 0 #ff5e3a;
+    box-shadow: 128px 0 0 0 #3F4257;
 }
 
 .ldio-qas1aupsnd9 > div:nth-child(4) {

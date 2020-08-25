@@ -1,14 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 .paginator {
-    margin: 10px;
+    margin: 20px 0;
+    height: 40px;
+    padding-top: 15px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
 }
 .pageNumber {
+    font-family: 'Roboto Condensed', sans-serif;
     padding: 2px;
-    border: 1px solid grey;
     cursor: pointer;
-
+    font-size: 20px;
+    margin: 0 10px;
+    color: #3F4257;
 }
 
 .pageNumber.selectedPage {
+    border-bottom: 2px solid #3F4257;
     font-weight: bold;
-    border-color: black;
+}
+
+.prevBtn, .nextBtn {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: white;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    outline: none;
 }

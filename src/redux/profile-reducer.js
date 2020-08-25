@@ -12,6 +12,7 @@ let initialState = {
         {id: 2, message: 'My first page', likesCount: '22'}
     ],
     profile: null,
+    headerImgUrl: 'https://html.crumina.net/html-olympus/img/top-header1.jpg',
     status: ''
 };
 

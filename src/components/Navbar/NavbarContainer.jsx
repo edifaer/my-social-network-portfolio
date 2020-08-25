@@ -20,16 +20,19 @@ class NavbarContainer extends React.Component {
     }
 
     render() {
+        let {profile,headerImgUrl, savePhoto} = this.props;
         return (
             <Navbar {...this.props}
-                     profile={this.props.profile}
-                     savePhoto={this.props.savePhoto}/>
+                    profile={profile}
+                    headerImgUrl={headerImgUrl}
+                    savePhoto={savePhoto}/>
         )
     }
 }
 
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
+    headerImgUrl: state.profilePage.headerImgUrl,
     authorizedUserId: state.auth.userId
 });
 
