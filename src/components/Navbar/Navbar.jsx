@@ -37,7 +37,7 @@ const Navbar = ({profile, headerImgUrl, savePhoto}) => {
                         <FontAwesomeIcon icon={faCamera}/>
                     </label>
                     <input id="file-upload" type={'file'} onChange={onMainPhotoSelected}
-                           className={style.changePhotoBtn}/>}
+                           className={style.changePhotoBtn}/>
                     <NavLink to="/profile">{profile.fullName}</NavLink>
                     <p>Lviv, Ukraine</p>
                 </div>

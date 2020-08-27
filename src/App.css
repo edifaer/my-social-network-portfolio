@@ -17,7 +17,6 @@
     grid-template-areas: 's p a';
     grid-template-columns: 2fr 8fr 2fr;
     column-gap: 20px;
-
 }
 
 body {

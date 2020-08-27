@@ -36,7 +36,7 @@
   border: 5px solid white;
   border-radius: 50%;
   bottom: 50px;
-  left: 15px;
+  left: 40px;
 }
 
 .personalData p {
@@ -68,7 +68,7 @@ input[type="file"] {
   position: absolute;
   display: inline-block;
   bottom: 55px;
-  left: 115px;
+  left: 140px;
   cursor: pointer;
 }
 

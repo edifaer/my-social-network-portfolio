@@ -24,6 +24,7 @@ let initialState = {
             videosCount: 16
         },
         {
+            id: 3,
             headerImg: 'https://html.crumina.net/html-olympus/img/friend3.jpg',
             friendPhoto: 'https://html.crumina.net/html-olympus/img/avatar3.jpg',
             friendName: 'Nicholas Grissom',
@@ -31,7 +32,9 @@ let initialState = {
             friendsCount: 52,
             photosCount: 240,
             videosCount: 16
-        }, {
+        },
+        {
+            id: 4,
             headerImg: 'https://html.crumina.net/html-olympus/img/friend4.jpg',
             friendPhoto: 'https://html.crumina.net/html-olympus/img/avatar4.jpg',
             friendName: 'Chris Greyson',
@@ -39,7 +42,9 @@ let initialState = {
             friendsCount: 52,
             photosCount: 240,
             videosCount: 16
-        }, {
+        },
+        {
+            id: 5,
             headerImg: 'https://html.crumina.net/html-olympus/img/friend5.jpg',
             friendPhoto: 'https://html.crumina.net/html-olympus/img/avatar5.jpg',
             friendName: 'Elaine Dreifuss',
@@ -47,7 +52,9 @@ let initialState = {
             friendsCount: 52,
             photosCount: 240,
             videosCount: 16
-        }, {
+        },
+        {
+            id: 6,
             headerImg: 'https://html.crumina.net/html-olympus/img/friend6.jpg',
             friendPhoto: 'https://html.crumina.net/html-olympus/img/avatar6.jpg',
             friendName: 'Bruce Peterson',
@@ -55,7 +62,9 @@ let initialState = {
             friendsCount: 52,
             photosCount: 240,
             videosCount: 16
-        }, {
+        },
+        {
+            id: 7,
             headerImg: 'https://html.crumina.net/html-olympus/img/friend7.jpg',
             friendPhoto: 'https://html.crumina.net/html-olympus/img/avatar7.jpg',
             friendName: 'Carol Summers',
@@ -63,7 +72,9 @@ let initialState = {
             friendsCount: 52,
             photosCount: 240,
             videosCount: 16
-        }, {
+        },
+        {
+            id: 8,
             headerImg: 'https://html.crumina.net/html-olympus/img/friend8.jpg',
             friendPhoto: 'https://html.crumina.net/html-olympus/img/avatar8.jpg',
             friendName: 'Michael Maximoff',

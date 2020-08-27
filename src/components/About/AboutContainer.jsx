@@ -11,8 +11,8 @@ import {withRouter} from "react-router-dom";
 import {compose} from "redux";
 import About from "./About";
 
-class ProfileContainer extends React.Component {
-    refreshProfile() {
+class AboutContainer extends React.Component {
+    refreshAboutInfo() {
         let userId = this.props.match.params.userId;
         if (!userId) {
             userId = this.props.authorizedUserId;
@@ -26,12 +26,12 @@ class ProfileContainer extends React.Component {
     }
 
     componentDidMount() {
-        this.refreshProfile();
+        this.refreshAboutInfo();
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.match.params.userId !== prevProps.match.params.userId) {
-            this.refreshProfile();
+            this.refreshAboutInfo();
         }
     }
 
@@ -42,6 +42,8 @@ class ProfileContainer extends React.Component {
                      profile={this.props.profile}
                      status={this.props.status}
                      updateStatus={this.props.updateStatus}
+                     education={this.props.education}
+                     skills={this.props.skills}
                     />
         )
     }
@@ -51,12 +53,14 @@ let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
     status: state.profilePage.status,
     authorizedUserId: state.auth.userId,
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
+    education: state.aboutPage.education,
+    skills: state.aboutPage.skills,
 });
 
 export default compose(
     connect(mapStateToProps, {setUserProfile, getUserProfile, getStatus, updateStatus, saveProfile}),
     withRouter,
-)(ProfileContainer);
+)(AboutContainer);
 
 

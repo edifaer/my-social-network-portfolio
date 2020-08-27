@@ -1,0 +1,16 @@
+.headerProgram {
+    margin-bottom: 0;
+}
+
+.period {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.company {
+    margin: 3px 0;
+}
+
+.description, .company, .period {
+    color: #9196af;
+}

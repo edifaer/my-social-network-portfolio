@@ -1,11 +1,97 @@
 .profileInfo {
-    margin: 10px;
+    grid-area: profile;
+    background-color: white;
+    border-radius: 5px;
+    color: #3F4257;
 }
 
-.mainPhoto {
-    max-width: 200px;
+.profileInfo h2 {
+    margin: 0;
+    font-size: 22px;
 }
 
-.contact {
-    padding-left: 10px;
+.headerPersonalInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px 20px 30px;
+}
+
+hr {
+    background-color: #ECF1F5;
+    border: none;
+    height: 2px;
+}
+
+.editBtn {
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.personalInfoContent {
+    padding: 15px 20px 20px 30px;
+}
+
+.infoField {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+    margin-bottom: 30px;
+}
+
+.infoField span {
+    display: block;
+    color: #9196af;
+    text-align: justify;
+}
+
+.infoField div, .socialNetworksHeader {
+    width: 150px;
+    font-weight: bold;
+    color: #3F4257;
+}
+
+.statusHelpMessage {
+    font-weight: normal;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.statusMessage {
+    cursor: pointer;
+}
+
+.contactBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+    height: 30px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.contactBtn span {
+    margin-left: 5px;
+}
+
+.facebookBtn {
+    background-color: #0573E7;
+}
+
+.linkedinBtn {
+    background-color: #0077B5;
+}
+
+.instagramBtn {
+    background-color: #F74881;
+}
+
+.codeWarsBtn {
+    background-color: #BB432C;
 }

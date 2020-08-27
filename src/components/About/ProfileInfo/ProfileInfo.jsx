@@ -1,21 +1,13 @@
 import React, {useState} from "react";
-import Preloader from "../../common/Preloader/Preloader";
 import s from "./ProfileInfo.module.css"
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import ProfileDataForm from "./ProfileDataForm";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCode, faEdit,} from "@fortawesome/free-solid-svg-icons";
+import {faFacebook, faGithub, faInstagram, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
-const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, saveProfile}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile}) => {
     let [editMode, setEditMode] = useState(false);
-
-    if (!profile) {
-        return <Preloader/>
-    }
-
-    const onMainPhotoSelected = (e) => {
-        if (e.target.files.length) {
-            savePhoto(e.target.files[0]);
-        }
-    }
 
     const onSubmit = (formData) => {
         saveProfile(formData).then(
@@ -27,53 +19,73 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
 
     return (
         <div className={s.profileInfo}>
-            <h1>{profile.fullName}</h1>
-            {isOwner &&
-            <input type={'file'} onChange={onMainPhotoSelected}/>}
-            <ProfileStatusWithHooks status={status} updateStatus={updateStatus} isOwner={isOwner}/>
-
             {editMode
                 ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
                 : <ProfileData goToEditMode={() => {
                     setEditMode(true)
-                }} profile={profile} isOwner={isOwner}/>
+                }} profile={profile} isOwner={isOwner} status={status} updateStatus={updateStatus}/>
             }
 
         </div>
     );
 }
 
-const ProfileData = ({profile, isOwner, goToEditMode}) => {
+const ProfileData = ({profile, isOwner, goToEditMode, status, updateStatus}) => {
     return <div>
-        {isOwner && <div>
-            <button onClick={goToEditMode}>edit</button>
-        </div>}
-        <div>
-            <b>Full name</b>: {profile.fullName}
+        <div className={s.headerPersonalInfo}>
+            <h2>Personal Information</h2>
+            {isOwner && <div>
+                <button onClick={goToEditMode} className={s.editBtn}>
+                    <FontAwesomeIcon icon={faEdit} size='lg'/>
+                </button>
+            </div>}
         </div>
-        <div>
-            <b>Looking for a job</b>: {profile.lookingForAJob ? "yes" : "no"}
-        </div>
-        {profile.lookingForAJob &&
-        <div>
-            <b>My professional skills</b>: {profile.lookingForAJobDescription}
-        </div>
-        }
-
-        <div>
-            <b>About me</b>: {profile.aboutMe}
-        </div>
-        <div>
-            <b>Contacts</b>: {Object.keys(profile.contacts).map(key => {
-            return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
-        })}
+        <hr/>
+        <div className={s.personalInfoContent}>
+            <div className={s.infoField}>
+                <div>Full name:</div>
+                <span>{profile.fullName}</span>
+            </div>
+            <ProfileStatusWithHooks status={status} updateStatus={updateStatus} isOwner={isOwner}/>
+            <div className={s.infoField}>
+                <div>About me:</div>
+                <span>{profile.aboutMe}</span>
+            </div>
+            <div className={s.infoField}>
+                <div>Looking for a job:</div>
+                {profile.lookingForAJob ? <span>Yes</span> : <span>No</span>}
+            </div>
+            {profile.lookingForAJob &&
+            <div className={s.infoField}>
+                <div>Email:</div>
+                <span>{profile.lookingForAJobDescription}</span>
+            </div>
+            }
+            <div>
+                <div className={s.socialNetworksHeader}>Social Networks:</div>
+                <a href={profile.contacts.github} className={s.contactBtn}
+                   target='_blank' rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faGithub} size='lg'/><span>Github</span>
+                </a>
+                <a href={profile.contacts.facebook} className={`${s.contactBtn} ${s.facebookBtn}`}
+                   target='_blank' rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faFacebook} size='lg'/><span>Facebook</span>
+                </a>
+                <a href={profile.contacts.instagram} className={`${s.contactBtn} ${s.instagramBtn}`}
+                   target='_blank' rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faInstagram} size='lg'/><span>Instagram</span>
+                </a>
+                <a href={profile.contacts.website} className={`${s.contactBtn} ${s.linkedinBtn}`}
+                   target='_blank' rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faLinkedin} size='lg'/><span>LinkedIn</span>
+                </a>
+                <a href={profile.contacts.mainLink} className={`${s.contactBtn} ${s.codeWarsBtn}`}
+                   target='_blank' rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faCode} size='lg'/><span>CodeWars</span>
+                </a>
+            </div>
         </div>
     </div>
-}
-
-
-const Contact = ({contactTitle, contactValue}) => {
-    return <div className={s.contact}><b>{contactTitle}</b>: {contactValue}</div>
 }
 
 export default ProfileInfo;

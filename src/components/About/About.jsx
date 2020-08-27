@@ -1,16 +1,22 @@
 import React from "react";
-import s from './About.module.css'
+import style from './About.module.css'
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import EducationInfo from "./EducationInfo/EducationInfo";
+import Preloader from "../common/Preloader/Preloader";
 
-const About = (props) => {
+const About = ({isOwner, profile, status, saveProfile, updateStatus, education, skills}) => {
+    if(!profile) {
+        return <Preloader/>
+    }
     return (
-        <div>
-            <ProfileInfo savePhoto={props.savePhoto}
-                         isOwner={props.isOwner}
-                         profile={props.profile}
-                         status={props.status}
-                         saveProfile={props.saveProfile}
-                         updateStatus={props.updateStatus}/>
+        <div className={style.container}>
+            <ProfileInfo
+                isOwner={isOwner}
+                profile={profile}
+                status={status}
+                saveProfile={saveProfile}
+                updateStatus={updateStatus}/>
+            <EducationInfo education={education} skills={skills}/>
         </div>
     );
 }
