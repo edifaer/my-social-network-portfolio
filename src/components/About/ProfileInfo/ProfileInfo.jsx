@@ -62,7 +62,7 @@ const ProfileData = ({profile, isOwner, goToEditMode, status, updateStatus}) => 
             </div>
             }
             <div>
-                <div className={s.socialNetworksHeader}>Social Networks:</div>
+                <div className={s.socialNetworksHeader}> Other Social Networks:</div>
                 <a href={profile.contacts.github} className={s.contactBtn}
                    target='_blank' rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} size='lg'/><span>Github</span>

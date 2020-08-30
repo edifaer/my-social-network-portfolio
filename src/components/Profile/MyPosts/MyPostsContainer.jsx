@@ -1,4 +1,4 @@
-import {addPostActionCreator} from "../../../redux/profile-reducer";
+import {addPhotoToPost, addPostActionCreator} from "../../../redux/profile-reducer";
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 import {reset} from "redux-form";
@@ -7,7 +7,8 @@ import {reset} from "redux-form";
 const mapStateToProps = (state) => {
     return {
         posts: state.profilePage.postData,
-        newPostText: state.profilePage.newPostText
+        newPostText: state.profilePage.newPostText,
+        profile: state.profilePage.profile
     }
 };
 
@@ -16,6 +17,9 @@ const mapDispatchToProps = (dispatch) => {
         addPost: (newPostText) => {
             dispatch(addPostActionCreator(newPostText));
             dispatch(reset('ProfileAddNewPostForm'));
+        },
+        addPhotoToPost: (file) => {
+            dispatch(addPhotoToPost(file));
         }
     }
 }

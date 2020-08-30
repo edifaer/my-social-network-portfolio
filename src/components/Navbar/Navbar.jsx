@@ -15,7 +15,6 @@ const Navbar = ({profile, headerImgUrl, savePhoto}) => {
             savePhoto(e.target.files[0]);
         }
     }
-
     return (
         <>
             <header className={style.header}>

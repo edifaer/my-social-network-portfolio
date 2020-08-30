@@ -6,7 +6,7 @@ let initialState = {
         },
         {
             id: 2, program: 'ReactJs - Way Samurai', company: 'IT-Incubator',
-            period: '02/2020 - 04/2020', description: 'ReactJs online course'
+            period: '02/2020 - 04/2020', description: 'ReactJs/Redux online course.'
         },
         {
             id: 3, program: 'Front-End Development', company: 'EPAM',
@@ -15,11 +15,13 @@ let initialState = {
         },
         {
             id: 4, program: 'ReactJs+Redux', company: 'Udemy',
-            period: '05/2020 - 07/2020', description: 'Some description'
+            period: '05/2020 - 07/2020', description: 'Online course for web-developers. ' +
+                'Technologies: ReactJs|Redux|Babel|Webpack'
         },
         {
             id: 5, program: 'Self-education', company: 'Anywhere',
-            period: 'All time', description: 'Some description'
+            period: 'All time', description: 'Everyday coding. Everyday improve my skills. Everyday write code. ' +
+                'I take part in different programming events and webinars.'
         },
     ],
     skills: [

@@ -1,4 +1,6 @@
 .content {
-    grid-area: p;
-    background-color: hotpink;
+    display: grid;
+    grid-template-areas: 's p a';
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 20px;
     }

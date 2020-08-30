@@ -1,14 +1,15 @@
 import React from "react";
 import {Field, reduxForm} from "redux-form";
+import style from '../MyPosts.module.css'
 
 const AddNewPostForm = (props) => {
     return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field name='newPostText' component="textarea" placeholder="IT-kamasutra"/>
+        <form onSubmit={props.handleSubmit} >
+            <div className={style.postInput}>
+                <Field name='newPostText' component="textarea" placeholder='write something' cols='62' rows='6'/>
             </div>
-            <div>
-                <button>Add post</button>
+            <div className={style.postBtn}>
+                <button>Publish</button>
             </div>
         </form>)
 }

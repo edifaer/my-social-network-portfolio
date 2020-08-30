@@ -1,4 +1,70 @@
 .sidebar {
-    grid-area: s;
-    background-color: violet;
+    grid-area: a;
   }
+
+.friendsSidebar {
+    height: 480px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+.friendsSidebar hr {
+    margin-bottom: 0;
+}
+
+.friendsSidebar h3 {
+    margin: 0 20px 15px;
+}
+
+.friendsList ul::-webkit-scrollbar {
+    width: 5px;
+    display: none;
+}
+
+.friendsList ul:hover::-webkit-scrollbar {
+    display: block;
+}
+
+.friendsList ul::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.friendsList ul::-webkit-scrollbar-thumb {
+    background-color: #9196af;
+    outline: 1px solid slategrey;
+}
+
+.friendsList ul{
+    margin-top: 10px;
+    height: 400px;
+    list-style: none;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.friendItem {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.friendItem img{
+    margin-right: 5px;
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.friendItem p{
+    margin: 5px 0 0;
+    color: #3F4257;
+}
+
+.friendItem span {
+    color: #9196af;
+    font-style: italic;
+    font-size: 14px;
+}
